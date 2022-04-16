@@ -5,7 +5,7 @@
 struct SYM {
   char ch;
   int prior;
-}
+};
 
 template<typename T, int size>
 class TPQueue {
@@ -29,6 +29,8 @@ class TPQueue {
   SYM pop() {
     if (i > 0)
       return arr[--i];
+    else
+      return -1;
   }
 };
 
