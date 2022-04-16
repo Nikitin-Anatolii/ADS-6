@@ -8,7 +8,7 @@ class TPQueue {
   struct SYM arr[size];
   int i = 0;
  public:
-  void push() {
+  void push(SYM item) {
     if (i < size) {
       for (int j = i; j > -1; j--) {
         if (j && (item.prior <= arr[j - 1].prior)) {
