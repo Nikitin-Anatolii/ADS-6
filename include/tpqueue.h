@@ -10,7 +10,8 @@ class TPQueue {
  public:
   void push(SYM item) {
     if (i < size) {
-      for (int j = i; j > -1; j--) {
+      ++i;
+      for (int j = i - 1; j > -1; j--) {
         if (j && (item.prior <= arr[j - 1].prior)) {
           arr[j] = arr[j - 1];
         } else {
@@ -18,7 +19,6 @@ class TPQueue {
           break;
         }
       }
-      ++i;
     }
   }
   SYM pop() {
