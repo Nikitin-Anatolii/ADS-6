@@ -30,7 +30,7 @@ class TPQueue {
     if (i > 0)
       return arr[--i];
     else
-      return -1;
+      std::cout << "!" << std::endl;
   }
 };
 
